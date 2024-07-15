@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+header h1 {
+    font-family: 'Moon Dance', cursive;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    font-family: 'Merriweather', serif;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0px 20px;
+    color: black;
+}
+
+header nav ul li a {
+    color: black;
+    transition: 0.5s ease-in;
+}
+
+header nav ul li a:hover {
+    border-bottom: 1px solid black;
+}
+
+.toggle-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.toggle-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.links-container.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#imgcasamento {
+    height: 90vh;
+    background-image: url(img/alianca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Centralizar a imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(237, 228, 228);
+}
+
+#imgcasamento h1 {
+    font-family: 'Moon Dance', cursive;
+    font-size: 100px;
+}
+
+#imgcasamento #data {
+    margin-bottom: 150px;
+    font-size: 30px;
+}
+
+#imgcasamento #conhecanos {
+    font-size: 30px;
+}
+
+#historia {
+    height: 90vh;
+    background-color: rgb(237, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#fotohistoria,
+#conto {
+    width: 300px;
+    margin: 20px;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#conto h1 {
+    margin-bottom: 30px;
+}
+
+#fotohistoria img {
+    width: 100%;
+    box-shadow: 0px 0px 10px black;
+}
+
+#presentes {
+    height: 100vh;
+    background-image: url(./img/presentes.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+}
+
+#presentes h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#btn-presente {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-presente:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 20px;
+    line-height: 43px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+footer ul li a {
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#modal_img {
+    width: 80vh;
+}
+
+#bt_close {
+    padding: 0px 10px;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    right: 350px;
+    cursor: pointer;
+}
+
+#bt_close:hover {
+    background-color: rgba(0, 0, 0, 0.501);
+}
+
+.modal_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: gray;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#localizacao {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#localizacao h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#localizacao p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#localizacao #mapa {
+    margin-top: 20px;
+}
+
+#localizacao #mapa iframe {
+    width: 600px;
+    height: 200px;
+    border: 0;
+}
+
+/* Estilizando os ícones */
+#localizacao i {
+    color: white;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    #localizacao #mapa iframe {
+        width: 100%;
+        height: auto; /* Ajusta a altura automaticamente */
+        box-sizing: border-box; /* Inclui padding e borda na largura total */
+    }
+
+
+    
+    .toggle-btn {
+        display: flex;
+    }
+
+    .links-container {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .links-container.show {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+    #imgcasamento h1 {
+        font-size: 60px;
+    }
+
+    #imgcasamento #data,
+    #imgcasamento #conhecanos {
+        font-size: 20px;
+    }
+
+    #historia {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #fotohistoria,
+    #conto {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #bt_close {
+        right: 10px;
+    }
+
+    #modal_img {
+        width: 90%;
+        height: auto;
+    }
+
+    #topo {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        color: gray;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+
+        #localizacao #mapa iframe {
+            width: 100%;
+            height: auto; /* Ajusta a altura automaticamente */
+            box-sizing: border-box; /* Inclui padding e borda na largura total */
+        }
+        #imgcasamento h1 {
+            font-size: 40px;
+        }
+
+        #imgcasamento #data,
+        #imgcasamento #conhecanos {
+            font-size: 16px;
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .toggle-btn {
+            display: flex;
+        }
+
+        .links-container {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            width: 200px;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .links-container.show {
+            display: flex;
+        }
+
+        .links-container .link {
+            margin: 10px 0;
+        }
+
+        header {
+            justify-content: space-between;
+        }
+
+        header nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #imgcasamento h1 {
+            font-size: 60px;
+        }
+
+        #imgcasamento #data,
+        #imgcasamento #conhecanos {
+            font-size: 20px;
+        }
+
+        #historia {
+            flex-direction: column;
+            height: auto;
+            padding: 20px 0;
+        }
+
+        #fotohistoria,
+        #conto {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        #bt_close {
+            right: 10px;
+        }
+
+        #modal_img {
+            width: 90%;
+            height: auto;
+        }
+    }
+}
